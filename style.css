@@ -30,3 +30,81 @@ body {
             background-color: #e3f2fd;
             border-radius: 8px;
         }
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 16px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.nav a:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    margin: 4px 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: #1976D2;
+        flex-direction: column;
+        padding: 12px;
+        border-radius: 8px;
+        display: none;
+        min-width: 150px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-inner {
+        position: relative;
+        padding: 10px 12px;
+    }
+}
